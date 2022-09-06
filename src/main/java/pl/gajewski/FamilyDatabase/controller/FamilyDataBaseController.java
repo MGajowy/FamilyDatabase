@@ -10,7 +10,6 @@ import pl.gajewski.FamilyDatabase.dto.FamilyMember;
 import pl.gajewski.FamilyDatabase.dto.FamilyResponse;
 import pl.gajewski.FamilyDatabase.service.FamilyDataBaseService;
 
-import java.util.List;
 
 @RestController
 @RequestMapping(FamilyDataBaseConstant.DB)

@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Family {
+    private Long id;
     private String familyName;
     private Integer nrOfAdults;
     private Integer nrOfChildren;

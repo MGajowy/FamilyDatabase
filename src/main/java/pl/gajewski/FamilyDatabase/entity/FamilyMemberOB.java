@@ -9,9 +9,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Getter
-@Setter
-@ToString
+@Data
 @Table(schema = ModelConstants.SCHEMA_FAMILY_MEMBER_DB, name = ModelConstants.TABLE_FAMILY_MEMBER_DB)
 @RequiredArgsConstructor
 public class FamilyMemberOB {

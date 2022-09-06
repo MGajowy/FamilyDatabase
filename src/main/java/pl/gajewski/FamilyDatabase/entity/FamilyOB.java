@@ -8,9 +8,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Getter
-@Setter
-@ToString
+@Data
 @RequiredArgsConstructor
 @Table(schema = ModelConstants.SCHEMA_FAMILY_DB, name = ModelConstants.TABLE_FAMILY_DB)
 

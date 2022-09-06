@@ -10,8 +10,6 @@ import pl.gajewski.FamilyDatabase.dto.FamilyMember;
 import pl.gajewski.FamilyDatabase.dto.FamilyResponse;
 import pl.gajewski.FamilyDatabase.entity.FamilyOB;
 import pl.gajewski.FamilyDatabase.entity.FamilyMemberOB;
-import pl.gajewski.FamilyDatabase.entity.FamilyMemberRepository;
-import pl.gajewski.FamilyDatabase.entity.FamilyRepository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
@@ -30,7 +28,6 @@ public class FamilyDataBaseService {
 
     @Autowired
     public FamilyDataBaseService(EntityManager entityManager) {
-
         this.entityManager = entityManager;
     }
 
@@ -43,7 +40,7 @@ public class FamilyDataBaseService {
             log.info("Zapis rodziny " + family.getFamilyName() + " przebiegł poprawnie.");
             return familyOB.getId();
         } catch (Exception e) {
-            log.info(FamilyDataBaseConstant.FAIL_SAVE_FAMILY + family.getUuidFamily() + e.getMessage());
+            log.info(FamilyDataBaseConstant.FAIL_SAVE_FAMILY + family.getUuidFamily() + " " + e.getMessage());
             return null;
         }
     }
